@@ -1,5 +1,7 @@
 FROM python:3.8.5-slim-buster
 RUN mkdir /app
+
+USER root
 COPY . /app/
 
 WORKDIR /app
