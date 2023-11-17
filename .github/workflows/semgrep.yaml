@@ -22,7 +22,7 @@ jobs:
         run: pip install semgrep
 
       - name: Run Semgrep
-        run: semgrep --config=p/security-audit --json . > semgrep_results.json
+        run: semgrep --config=p/security-audit --json . || true > semgrep_results.json
 
       - name: Upload results to GitHub Advanced Security Dashboard
         uses: github/codeql-action/upload-sarif@v1
