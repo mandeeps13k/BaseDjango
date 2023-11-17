@@ -38,8 +38,7 @@ jobs:
               --sarif --output semgrep.sarif \
               --verbose \
               --metrics=off \
-              --config "p/django" \
-              --config="config/semgrep_rules/"
+              --config "p/auto" \
 
       # Upload SARIF file generated in previous step
       - name: Upload SARIF file
