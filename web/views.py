@@ -22,6 +22,7 @@ import requests
 def get_user_object(request):
     user = request.user
     d = {"authenticated": user.is_authenticated}
+    print("test")
     if user.is_authenticated:
         d['full_name'] = user.get_full_name()
         d['username'] = user.username
