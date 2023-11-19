@@ -39,3 +39,8 @@ jobs:
         with:
           sarif_file: semgrep.sarif
         if: always()
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: semgrep-results
+          path: /semgrep.sarif
