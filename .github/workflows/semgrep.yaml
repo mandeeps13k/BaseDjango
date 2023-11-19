@@ -40,6 +40,9 @@ jobs:
           sarif_file: semgrep.sarif
         if: always()
 
+      - name: run-command-check-path
+        run: pwd && ls 
+
       - uses: actions/upload-artifact@v3
         with:
           name: semgrep-results
